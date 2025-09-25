@@ -17,8 +17,11 @@ main {
 article {
   flex: 2;
   overflow-y: auto; /* allows scrolling */
-  padding: 1rem;
-  background-color: #f9f9f9;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  color: #333;
 }
 
 /* Aside takes 1/3 of the width */
@@ -29,10 +32,45 @@ aside {
   background-color: #eee;
 }
 
-/* Header and footer styles for clarity */
+/* Header and footer styles */
 header, footer {
   padding: 1rem;
   background-color: #333;
   color: #fff;
   text-align: center;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 2rem;   /* bigger logo */
+  margin-right: 1rem;
+  color: #ff6600;    /* orange */
+}
+
+/* Navigation styling */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li a {
+  color: #007BFF;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #ff6600;
+}
+
+/* Headings inside article */
+article h1, article h2, article h3 {
+  color: #222;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.3rem;
 }
