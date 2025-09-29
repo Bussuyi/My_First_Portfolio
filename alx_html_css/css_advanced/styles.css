@@ -311,76 +311,95 @@ main section:first-of-type div:nth-child(2) div > div p {
 
 /* ---------------- FAQ ---------------- */
 .faq {
+  padding: 80px 20px;
   background: #fff;
-  color: #333;
-  padding: 80px 60px;
   text-align: center;
 }
 
 .faq h2 {
-  font-size: 28px;
-  margin-bottom: 40px;
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 600;
 }
 
-.faq .rows {
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.faq-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
+  gap: 30px;
 }
 
-.faq .item {
-  flex: 1 1 400px;
+.faq-item {
+  flex: 1;
+  min-width: 300px;
   text-align: left;
 }
 
-.faq .item h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+.faq-item h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
-.faq .item p {
-  font-size: 14px;
+.faq-item p {
+  font-size: 16px;
   color: #555;
+  line-height: 1.6;
 }
-
 /* ---------------- FOOTER ---------------- */
-footer {
-  background: #071629;
-  color: #fff;
-  padding: 40px 60px;
+.footer {
+  background-color: #071629;
+  color: white;
+  padding: 40px 20px;
   text-align: center;
 }
 
-footer .top {
+.footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
   flex-wrap: wrap;
 }
 
-footer .top img {
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-left img {
   height: 40px;
 }
 
-footer .socials {
-  display: flex;
-  gap: 20px;
-}
-
-footer .socials i {
+.footer-left span {
   font-size: 18px;
-  color: #fff;
-  transition: 0.3s;
+  font-weight: 600;
 }
 
-footer .socials i:hover {
-  color: #C271FF;
+.footer-right a {
+  margin: 0 10px;
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s ease;
 }
 
-footer p {
-  font-size: 13px;
-  color: #aaa;
+.footer-right a:hover {
+  color: #C271FF; /* purple hover */
 }
+
+.footer p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #a8a7a7;
+}
+
 
