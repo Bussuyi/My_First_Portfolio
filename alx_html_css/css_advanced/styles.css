@@ -1,0 +1,386 @@
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  color: #1f1f1f;
+  line-height: 1.5;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+header nav img {
+  height: 40px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #C271FF;
+}
+
+/* Banner / First Section */
+main section:first-of-type {
+    height: 100vh;
+    background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/Object.png"); /* must wrap path in url() */
+    background-repeat: no-repeat;
+    background-size: cover;   /* scales to cover the section */
+    background-position: center; /* centers the image */
+    text-align: center;
+}
+
+
+main section:first-of-type > div {
+    flex: 1;
+    min-width: 300px; /* ensures mobile layout */
+    margin: 20px;
+}
+
+main section:first-of-type h1 {
+    font-size: 60px; /* adjust from Figma */
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+main section:first-of-type span {
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+main section:first-of-type button {
+    margin-top: 20px;
+    padding: 14px 40px;
+    background: linear-gradient(90deg, #C271FF, #7E47FF);
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+main section:first-of-type button:hover {
+    opacity: 0.7;
+}
+
+/* ---------------- LEARN FROM THE PROS ---------------- */
+
+main section:first-of-type div:nth-child(2) h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+main section:first-of-type div:nth-child(2) h2 span {
+  color: #C271FF;
+}
+
+main section:first-of-type div:nth-child(2) div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+main section:first-of-type div:nth-child(2) div > div {
+  flex: 1;
+  min-width: 200px;
+  max-width: 240px;
+  padding: 60px 20px;
+  background-color: transparent;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+main section:first-of-type div:nth-child(2) div > div img {
+  width: 120px; /* adjust */
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 4px;
+}
+
+main section:first-of-type div:nth-child(2) div > div h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+main section:first-of-type div:nth-child(2) div > div p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Mobile / Responsive adjustments */
+@media (max-width: 768px) {
+  header nav ul {
+    gap: 16px;
+  }
+
+  main section:first-of-type {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+
+  main section:first-of-type h1 {
+    font-size: 2.4rem;
+  }
+
+  main section:first-of-type button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* ---------------- POPULAR TUTORIALS ---------------- */
+.popular {
+  background: #fff;
+  color: #000;
+  text-align: center;
+  padding: 80px 60px;
+}
+
+.popular h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.popular h2 span {
+  color: #C271FF;
+}
+
+.popular .cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.popular .card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 260px;
+  text-align: left;
+}
+
+.popular .card img {
+  width: 100%;
+  display: block;
+}
+
+.popular .card h3 {
+  font-size: 18px;
+  margin: 10px 15px 5px;
+}
+
+.popular .card p {
+  font-size: 14px;
+  margin: 0 15px 10px;
+  color: #555;
+}
+
+.popular .card .author {
+  display: flex;
+  align-items: center;
+  margin: 10px 15px;
+  gap: 10px;
+}
+
+.popular .card .author img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.popular .card .stars {
+  display: flex;
+  margin: 0 15px 10px;
+  color: #C271FF;
+}
+
+.popular .card .duration {
+  margin: 0 15px 15px;
+  font-size: 13px;
+  color: #999;
+}
+
+/* ---------------- FREE MEMBERSHIP ---------------- */
+.membership {
+  background: #071629;
+  color: #fff;
+  text-align: center;
+  padding: 80px 60px;
+}
+
+.membership h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.membership h2 span {
+  color: #C271FF;
+}
+
+.membership .items {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.membership .item {
+  max-width: 220px;
+}
+
+.membership .item img {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.membership .item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.membership .item p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.membership button {
+  padding: 12px 30px;
+  background: linear-gradient(90deg, #C271FF, #7E47FF);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.membership button:hover {
+  opacity: 0.9;
+}
+
+/* ---------------- FAQ ---------------- */
+.faq {
+  background: #fff;
+  color: #333;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.faq .rows {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.faq .item {
+  flex: 1 1 400px;
+  text-align: left;
+}
+
+.faq .item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.faq .item p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background: #071629;
+  color: #fff;
+  padding: 40px 60px;
+  text-align: center;
+}
+
+footer .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+footer .top img {
+  height: 40px;
+}
+
+footer .socials {
+  display: flex;
+  gap: 20px;
+}
+
+footer .socials i {
+  font-size: 18px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+footer .socials i:hover {
+  color: #C271FF;
+}
+
+footer p {
+  font-size: 13px;
+  color: #aaa;
+}
+
